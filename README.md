@@ -46,7 +46,15 @@ classDiagram
 ```mermaid
 classDiagram
       Game 
-      Room   
+      Room
+class Game{
+      +Cretae_room()
+      +Switch_room()
+      +Join()
+}
+class room{
+Vote()
+}
 
 ```
 
