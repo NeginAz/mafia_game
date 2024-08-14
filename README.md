@@ -1,8 +1,6 @@
 # Mafia Game Implementation in C++
 
 ### Overview: <br>
-This project is an implementation of the classic Mafia game in C++. In this game, players are randomly assigned different roles: Joker, Villager, Detective, Doctor, RouinTan, Mafia, GodFather, and Silencer. Players perform actions based on their roles to either uncover the Mafia members or eliminate all the Villagers. 
-
 This project is a C++ object-oriented system designed to assist the "god" in moderating the Mafia game. The system provides a comprehensive solution for managing multiple games across different rooms simultaneously, allowing the god to assign roles, track game events, and perform necessary calculations to determine game outcomes.
 
 The Mafia game involves various roles, including Joker, Villager, Detective, Doctor, RouinTan, Mafia, GodFather, and Silencer, which are randomly assigned to players. The system is designed with a flexible class structure: a Game class that manages Room instances, where each room hosts players with different roles.
