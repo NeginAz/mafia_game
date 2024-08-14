@@ -1,7 +1,13 @@
 # Mafia Game Implementation in C++
 
 ### Overview: <br>
-This project is an implementation of the classic Mafia game in C++. In this game, players are randomly assigned different roles: Joker, Villager, Detective, Doctor, RouinTan, Mafia, GodFather, and Silencer. Players perform actions based on their roles to either uncover the Mafia members or eliminate all the Villagers.
+This project is an implementation of the classic Mafia game in C++. In this game, players are randomly assigned different roles: Joker, Villager, Detective, Doctor, RouinTan, Mafia, GodFather, and Silencer. Players perform actions based on their roles to either uncover the Mafia members or eliminate all the Villagers. 
+
+This project is a C++ object-oriented system designed to assist the "god" in moderating the Mafia game. The system provides a comprehensive solution for managing multiple games across different rooms simultaneously, allowing the god to assign roles, track game events, and perform necessary calculations to determine game outcomes.
+
+The Mafia game involves various roles, including Joker, Villager, Detective, Doctor, RouinTan, Mafia, GodFather, and Silencer, which are randomly assigned to players. The system is designed with a flexible class structure: a Game class that manages Room instances, where each room hosts players with different roles.
+
+A base class User underpins the system, with derived classes representing the different player roles, such as Villager, Mafia, and Joker. Further specializations include roles like Detective, Doctor, and RouinTan derived from the Villager class, and GodFather and Silencer derived from the Mafia class. This design ensures that the god can effectively manage the game, providing a seamless and organized experience for all participant
 
 
 ### Roles: <br> 
@@ -9,7 +15,7 @@ This project is an implementation of the classic Mafia game in C++. In this game
 * Villager: A regular townsperson with no special abilities.
 * Detective: Can investigate players to determine their roles.
 * Doctor: Can heal one player per round, saving them from potential elimination.
-* RouinTan: Has special abilities (customize based on game rules).
+* RouinTan: Has special abilities.
 * Mafia: Works with the other Mafia members to eliminate the Villagers.
 * GodFather: The leader of the Mafia, often undetectable by the Detective.
 * Silencer: Can silence one player per round, preventing them from speaking or voting.
