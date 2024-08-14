@@ -71,7 +71,9 @@ classDiagram
       Player: ~int silence=0 
       Player: ~int vote=0 
       Player: ~int kill
-      
+      Detective :+string get_role()
+      Detective: +Detective(string username)
+      Villager <|-- Detective
 class Game{
       +void  add_role(string role_name_,string role_num)
       +void create_room(vector <string> commands)
