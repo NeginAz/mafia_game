@@ -43,6 +43,14 @@ classDiagram
       }
 ```
 
+```mermaid
+classDiagram
+      Game 
+      Room   
+
+```
+
+
 
 ### Commands: 
 The following commands are available for players to interact with the game:
