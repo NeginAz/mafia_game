@@ -199,6 +199,11 @@ class room{
         + ~Room()
         +int get_delete()
 }
+
+
+
+
+
 class Player{
   +virtual string get_role()=0
   +Player(string username)
