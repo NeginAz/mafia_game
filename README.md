@@ -74,6 +74,18 @@ classDiagram
       Detective :+string get_role()
       Detective: +Detective(string username)
       Villager <|-- Detective
+      Doctor :+string get_role()
+      Doctor: +Doctor (string username)
+      Villager <|-- Doctor
+      GodFather:  +string get_role()
+      GodFather: +GodFather(string username)
+      Mafia <|-- GodFather
+      Joker : + virtual string get_role()
+      Joker: +Joker (string username)
+      Joker: +bool is_Mafia()
+      Joker: +bool is_Villager()
+      Player <|-- Joker
+      
 class Game{
       +void  add_role(string role_name_,string role_num)
       +void create_room(vector <string> commands)
