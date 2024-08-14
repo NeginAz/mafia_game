@@ -18,6 +18,31 @@ A base class User underpins the system, with derived classes representing the di
 * GodFather: The leader of the Mafia, often undetectable by the Detective.
 * Silencer: Can silence one player per round, preventing them from speaking or voting.
 
+### System Design: 
+```mermaid
+classDiagram
+      Animal <|-- Duck
+      Animal <|-- Fish
+      Animal <|-- Zebra
+      Animal : +int age
+      Animal : +String gender
+      Animal: +isMammal()
+      Animal: +mate()
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }
+```
+
 
 ### Commands: 
 The following commands are available for players to interact with the game:
