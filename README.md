@@ -45,7 +45,7 @@ classDiagram
 
 ```mermaid
 classDiagram
-      Game 
+      Game *-- Room
       Room
       Game : -vector <Room*> rooms
       Game : -Room* curr
