@@ -50,20 +50,28 @@ classDiagram
       Game : -vector <Room*> rooms
       Game : -Room* curr
       Room : -string room_name
-   Room : -int Day_Night=0
-   Room : -int Day_Num=0
-   Room : -int state_night
-   Room : -vector <string> role_name
-   Room : -vector <int> role_number
-   Room : -vector <string> user_name
-   Room : -vector <int> player_ind
-   Room : -vector<Player*> player
-   Room : -vector <string> voters
-   Room : -vector<string> votee
-   Room : -vector<string> detect
-   Room : -vector<string>silencer
-   Room : -vector<string>doctor
-   Room : -int delete_room=0
+      Room : -int Day_Night=0
+      Room : -int Day_Num=0
+      Room : -int state_night
+      Room : -vector <string> role_name
+      Room : -vector <int> role_number
+      Room : -vector <string> user_name
+      Room : -vector <int> player_ind
+      Room : -vector<Player*> player
+      Room : -vector <string> voters
+      Room : -vector<string> votee
+      Room : -vector<string> detect
+      Room : -vector<string>silencer
+      Room : -vector<string>doctor
+      Room : -int delete_room=0
+      Player: ~string name
+      Player: ~int live=1
+      Player: ~int extra_live=0
+      Player: ~int nodeath=0
+      Player: ~int silence=0 
+      Player: ~int vote=0 
+      Player: ~int kill
+      
 class Game{
       +void  add_role(string role_name_,string role_num)
       +void create_room(vector <string> commands)
