@@ -73,8 +73,38 @@ classDiagram
       Player: ~int kill
       Villager <|-- Detective
       Villager <|-- Doctor
+      Villager <|-- RouinTan
       Mafia <|-- GodFather
       Player <|-- Joker
+      Player <|-- Mafia
+      Villager <|-- RouinTan
+      Mafia <|-- Silencer
+      Player <|-- Villager
+
+class Villager{
+      +virtual string get_role()
+      +Villager(string username)
+      +bool is_Mafia()
+      +bool is_Villager()
+}
+
+
+class Silencer{
+      +string get_role()
+      +Silencer(string username)
+}
+
+class RouinTan{
+      +string get_role()
+      +RouinTan(string username)
+}
+
+class Mafia{
+      +virtual string get_role()
+      +Mafia(string username)
+      +bool is_Mafia()
+      +bool is_Villager()
+}
 
 class Detective{
       +string get_role()
