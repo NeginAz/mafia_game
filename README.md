@@ -49,7 +49,7 @@ classDiagram
       Room
       Game : -vector <Room*> rooms
       Game : -Room* curr
-      Room : -string room_name;
+      Room : -string room_name
    Room : -int Day_Night=0
    Room : -int Day_Num=0
    Room : -int state_night
