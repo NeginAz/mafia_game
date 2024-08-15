@@ -102,23 +102,23 @@ class Joker{
 }      
 class Game{
       +add_role(role_name_, role_num)
-      +create_room(vector <string> commands)
+      +create_room(vector ~string~ commands)
       +check_num_villager() bool
       +check_num_mafia() bool
-      +switch_room(vector <string> commands)
-      +join(vector <string> commands)
+      +switch_room(vector ~string~ commands)
+      +join(vector ~string~ commands)
       +show_Day()
-      +vote(vector <string> commands)
+      +vote(vector ~string~ commands)
       +end_vote()
       +detect()
       +silent()
-      +detect(vector <string> commands)
-      +heal(vector <string> commands)
-      +silent(vector <string> commands)
+      +detect(vector ~string~ commands)
+      +heal(vector ~string~ commands)
+      +silent(vector ~string~ commands)
       +check_room(room_name) int
       +change_to_number(role_num) int
-      +check_create_room(vector <string> commands)
-      +get_room_state(vector <string> commands)
+      +check_create_room(vector ~string~ commands)
+      +get_room_state(vector ~string~ commands)
       +check_delete()
 }
 class room{
@@ -144,7 +144,7 @@ class room{
         +is_silencer(silencer_name) bool
         +save_player(player_)
         +check_suspect(suspect)
-        +check_detective(string detective_) bool 
+        +check_detective(detective_) bool 
         +dead_Day(index)
         +Night_vote(voter,index)
         +kill_Night(index) 
