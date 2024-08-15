@@ -222,9 +222,6 @@ The following commands are available for players to interact with the game:
 * Silenced user_name: Marks the specified user as silenced.
 * Get_room_state: Outputs the current state of the room, including the number of Mafia members and Villagers.
 
-### License:
-
-
 ### Usage:
 Follow the prompts in the game to create rooms, join rooms, assign roles, and play the game using the available commands.
 
