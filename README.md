@@ -28,16 +28,16 @@ classDiagram
       Room : -int Day_Night=0
       Room : -int Day_Num=0
       Room : -int state_night
-      Room : -vector <string> role_name
-      Room : -vector <int> role_number
-      Room : -vector <string> user_name
-      Room : -vector <int> player_ind
-      Room : -vector<Player*> player
-      Room : -vector <string> voters
-      Room : -vector<string> votee
-      Room : -vector<string> detect
-      Room : -vector<string>silencer
-      Room : -vector<string>doctor
+      Room : -vector ~string~ role_name
+      Room : -vector ~int~ role_number
+      Room : -vector ~string~ user_name
+      Room : -vector ~int~ player_ind
+      Room : -vector ~Player*~ player
+      Room : -vector ~string~ voters
+      Room : -vector ~string~ votee
+      Room : -vector ~string~ detect
+      Room : -vector ~string~ silencer
+      Room : -vector ~string~ doctor
       Room : -int delete_room=0
       Player: ~string name
       Player: ~int live=1
