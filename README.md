@@ -103,76 +103,34 @@ class Joker{
 class Game{
       +add_role(role_name_, role_num)
       +create_room(vector ~string~ commands)
-      +check_num_villager() bool
-      +check_num_mafia() bool
       +switch_room(vector ~string~ commands)
       +join(vector ~string~ commands)
       +show_Day()
       +vote(vector ~string~ commands)
-      +end_vote()
-      +detect()
-      +silent()
       +detect(vector ~string~ commands)
       +heal(vector ~string~ commands)
       +silent(vector ~string~ commands)
-      +check_room(room_name) int
       +change_to_number(role_num) int
-      +check_create_room(vector ~string~ commands)
       +get_room_state(vector ~string~ commands)
-      +check_delete()
 }
 class room{
-        +get_room_name() String
-        +Room(room_name_)
         +set_role_number(index, num)
-        +get_role_number(index) int
-        +get_role_name(index) String
         +add_user_name(username_) int
         +all_roles() int
         +alloc_role(ind, username)
-        +set_role()
-        +role_to_person()
         +rand_role(username_) int
         +get_Day() int
-        +inc_Day()
-        +get_Day_Night() int
-        +set_Day_Night()
         +check_voter(voter)
         +check_votee(votee,voter)
         +count_votes()
-        +make_silent(player_)
-        +is_silencer(silencer_name) bool
         +save_player(player_)
         +check_suspect(suspect)
-        +check_detective(detective_) bool 
-        +dead_Day(index)
-        +Night_vote(voter,index)
-        +kill_Night(index) 
-        +check_doctor(doctor_) bool
-        +Num_Mafia() int
-        +print_role()
-        +add_votes_to_player()
-        +find_voter(voter) int
-        +find_player(name) int
-        +set_vote_zero()
-        +change_voter_vote(voter)
-        +repeated_detective(detective_) int
-        +repeated_doctor(doctor_) int
-        +repeated_silencer(silencer_name) int
-        +show_silenced()
-        +Night()
         +kill_player()
-        +Num_Villager() int
         +end_of_game()
         +set_state_night(state)
         +get_state_night() int
         +check_state_night()
-        +num_silencer() int
-        +num_doctor() int
-        +num_detective() int
-        +change_Day()
-        + ~Room()
-        +get_delete() int
+
 }
 
 
@@ -181,9 +139,6 @@ class room{
 
 class Player{
   +virtual get_role()=0 String
-  +Player(username)
-  +get_silence() int
-  +set_silence()
   +add_vote()
   +get_vote() int
   +get_name() String
@@ -194,12 +149,7 @@ class Player{
   +zero_extra_live()
   +virtual is_Mafia()=0 bool
   +virtual is_Villager()=0 bool
-  +set_nodeath()
-  +get_nodeath() int
-  +set_vote_to_zero()
   +set_kill()
-  +get_kill() int
-  +zero_kill()
 }
 
 ```
