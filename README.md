@@ -22,7 +22,7 @@ A base class User underpins the system, with derived classes representing the di
 
 ```mermaid
 classDiagram
-      Game : -vector <Room*> rooms
+      Game : -vector ~Room*~ rooms
       Game : -Room* curr
       Room : -string room_name
       Room : -int Day_Night=0
@@ -119,7 +119,7 @@ class Game{
       +change_to_number(role_num) int
       +check_create_room(vector <string> commands)
       +get_room_state(vector <string> commands)
-      +check_delete();
+      +check_delete()
 }
 class room{
         +get_room_name() String
