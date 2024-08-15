@@ -57,122 +57,122 @@ classDiagram
       Player <|-- Villager
 
 class Villager{
-      +virtual string get_role()
-      +Villager(string username)
-      +bool is_Mafia()
-      +bool is_Villager()
+      +virtual get_role() String
+      +Villager(username)
+      +is_Mafia() bool
+      +is_Villager() bool
 }
 
 
 class Silencer{
-      +string get_role()
-      +Silencer(string username)
+      +get_role() String
+      +Silencer(username)
 }
 
 class RouinTan{
-      +string get_role()
-      +RouinTan(string username)
+      +get_role() String
+      +RouinTan(username)
 }
 
 class Mafia{
-      +virtual string get_role()
-      +Mafia(string username)
-      +bool is_Mafia()
-      +bool is_Villager()
+      +virtual get_role() String
+      +Mafia(username)
+      +is_Mafia() bool
+      +is_Villager() bool
 }
 
 class Detective{
-      +string get_role()
-      +Detective(string username)
+      +get_role() String
+      +Detective(username)
 }
 class GodFather{
-      +string get_role()
-      +GodFather(string username)
+      +get_role() String
+      +GodFather(username)
 }
 class Doctor{
-      +string get_role()
-      +Doctor (string username)
+      +get_role() String
+      +Doctor (username)
 }
 
 class Joker{
-      +virtual string get_role()
-      +Joker (string username)
-      +bool is_Mafia()
-      +bool is_Villager()
+      +virtual get_role() String
+      +Joker (username)
+      +is_Mafia() bool
+      +is_Villager() bool
 }      
 class Game{
-      +void  add_role(string role_name_,string role_num)
-      +void create_room(vector <string> commands)
-      +bool check_num_villager()
-      +bool check_num_mafia()
-      +void switch_room(vector <string> commands)
-      +void join(vector <string> commands)
-      +void show_Day()
-      +void vote(vector <string> commands)
-      +void  end_vote()
-      +void detect()
-      +void silent()
-      +void detect(vector <string> commands)
-      +void heal(vector <string> commands)
-      +void  silent(vector <string> commands)
-      +int check_room(string room_name)
-      +int change_to_number(string role_num)
-      +void check_create_room(vector <string> commands)
-      +void get_room_state(vector <string> commands)
-      +void check_delete();
+      +add_role(role_name_, role_num)
+      +create_room(vector <string> commands)
+      +check_num_villager() bool
+      +check_num_mafia() bool
+      +switch_room(vector <string> commands)
+      +join(vector <string> commands)
+      +show_Day()
+      +vote(vector <string> commands)
+      +end_vote()
+      +detect()
+      +silent()
+      +detect(vector <string> commands)
+      +heal(vector <string> commands)
+      +silent(vector <string> commands)
+      +check_room(room_name) int
+      +change_to_number(role_num) int
+      +check_create_room(vector <string> commands)
+      +get_room_state(vector <string> commands)
+      +check_delete();
 }
 class room{
-        +string get_room_name()
-        +Room(string room_name_)
-        +void set_role_number(int index,int num)
-        +int get_role_number(int index)
-        +string get_role_name(int index)
-        +int add_user_name(string username_)
-        +int all_roles()
-        +void alloc_role(int ind,string username)
-        +void set_role()
-        +void role_to_person()
-        +int rand_role(string username_)
-        +int get_Day()
-        +void  inc_Day()
-        +int get_Day_Night()
-        +void set_Day_Night()
-        +void check_voter(string voter)
-        +void check_votee(string votee,string voter)
-        +void count_votes()
-        +void make_silent(string player_)
-        +bool is_silencer(string silencer_name)
-        +void save_player(string player_)
-        +void check_suspect(string suspect)
-        +bool check_detective(string detective_)
-        +void dead_Day(int index)
-        +void Night_vote(string voter,int index)
-        +void kill_Night(int index)
-        +bool check_doctor(string doctor_)
-        +int Num_Mafia()
-        +void print_role()
-        +void add_votes_to_player()
-        +int find_voter(string voter)
-        +int find_player(string name)
-        +void set_vote_zero()
-        +void change_voter_vote(string voter)
-        +int repeated_detective(string detective_)
-        +int repeated_doctor(string doctor_)
-        +int repeated_silencer(string silencer_name)
-        +void show_silenced()
-        +void Night()
-        +void kill_player()
-        +int Num_Villager()
-        +void end_of_game()
-        +void set_state_night(int state)
-        +int get_state_night()
-        +void check_state_night()
-        +int num_silencer()
-        +int num_doctor()
-        +int num_detective()
-        +void change_Day()
+        +get_room_name() String
+        +Room(room_name_)
+        +set_role_number(index, num)
+        +get_role_number(index) int
+        +get_role_name(index) String
+        +add_user_name(username_) int
+        +all_roles() int
+        +alloc_role(ind, username)
+        +set_role()
+        +role_to_person()
+        +rand_role(username_) int
+        +get_Day() int
+        +inc_Day()
+        +get_Day_Night() int
+        +set_Day_Night()
+        +check_voter(voter)
+        +check_votee(votee,voter)
+        +count_votes()
+        +make_silent(player_)
+        +is_silencer(silencer_name) bool
+        +save_player(player_)
+        +check_suspect(suspect)
+        +check_detective(string detective_) bool 
+        +dead_Day(index)
+        +Night_vote(voter,index)
+        +kill_Night(index) 
+        +check_doctor(doctor_) bool
+        +Num_Mafia() int
+        +print_role()
+        +add_votes_to_player()
+        +find_voter(voter) int
+        +find_player(name) int
+        +set_vote_zero()
+        +change_voter_vote(voter)
+        +repeated_detective(detective_) int
+        +repeated_doctor(doctor_) int
+        +repeated_silencer(silencer_name) int
+        +show_silenced()
+        +Night()
+        +kill_player()
+        +Num_Villager() int
+        +end_of_game()
+        +set_state_night(state)
+        +get_state_night() int
+        +check_state_night()
+        +num_silencer() int
+        +num_doctor() int
+        +num_detective() int
+        +change_Day()
         + ~Room()
-        +int get_delete()
+        +get_delete() int
 }
 
 
@@ -180,26 +180,26 @@ class room{
 
 
 class Player{
-  +virtual string get_role()=0
-  +Player(string username)
-  +int get_silence()
-  +void set_silence()
-  +void add_vote()
-  +int get_vote()
-  +string get_name()
-  +void set_live()
-  +int get_live()
-  +void set_extra_live()
-  +int get_extra_live()
-  +void zero_extra_live()
-  +virtual bool is_Mafia()=0
-  +virtual bool is_Villager()=0 
-  +void set_nodeath()
-  +int get_nodeath()
-  +void set_vote_to_zero()
-  +void set_kill()
-  +int get_kill()
-  +void zero_kill()
+  +virtual get_role()=0 String
+  +Player(username)
+  +get_silence() int
+  +set_silence()
+  +add_vote()
+  +get_vote() int
+  +get_name() String
+  +set_live()
+  +get_live() int
+  +set_extra_live()
+  +get_extra_live() int
+  +zero_extra_live()
+  +virtual is_Mafia()=0 bool
+  +virtual is_Villager()=0 bool
+  +set_nodeath()
+  +get_nodeath() int
+  +set_vote_to_zero()
+  +set_kill()
+  +get_kill() int
+  +zero_kill()
 }
 
 ```
